@@ -1,0 +1,17 @@
+﻿@model IEnumerable<String>
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>VendorState</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><a asp-action="Vendor" asp-controller="Vendor" asp-route-name="@item">@item</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
